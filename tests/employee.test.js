@@ -2,10 +2,9 @@ const Employee = require("../roles/employee");
 
 test("creates employee object", () => {
   const employee = new Employee("Steve", 20, "steve@gmail.com");
-
-  expect(employee.name).toEqual(expect.any(String));
-  expect(employee.id).toEqual(expect.any(Number));
-  expect(employee.email).toEqual(expect.any(String));
+  expect(employee.name).toEqual("Steve");
+  expect(employee.id).toEqual(20);
+  expect(employee.email).toEqual("steve@gmail.com");
 });
 
 test("pulls employee name", () => {
@@ -26,7 +25,7 @@ test("gets email", () => {
   expect(employee.getEmail()).toEqual("steve@gmail.com");
 });
 
-test("gets role of employee", () => {
+test("sets role", () => {
   const employee = new Employee("Steve", 20, "steve@gmail.com");
 
   expect(employee.getRole()).toEqual("Employee");

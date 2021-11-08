@@ -8,7 +8,7 @@ test("creates Engineer object", () => {
   expect(engineer.github).toEqual("steve");
 });
 
-test("gets role of employee", () => {
+test("changes role", () => {
   const engineer = new Engineer("Steve", 20, "steve@gmail.com", "steve");
 
   expect(engineer.getRole()).toEqual("Engineer");
